@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONFAID - Mental Health Awareness</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>CONFAID</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="/therapy">Therapy</a></li>
+                <li><a href="/community">Community</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="#" id="logout-btn">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-text">
+            <h2>Welcome to CONFAID</h2>
+            <p>Your Journey to Mental Wellness Begins Here.</p><br><br>
+            <a href="register.html" class="cta-button">Get Started</a>
+            <script src="server.js"></script>
+
+        </div>
+    </section>
+        
+        <!-- Overview Section -->
+        <div class="overview-section">
+            <h3>About Us</h3>
+            <p>CONFAID is dedicated to providing accessible mental health resources, support, and guidance for everyone. We believe that mental wellness is a journey, and we're here to support you every step of the way, whether through articles, community engagement, or direct access to professional resources.
+                <br>
+                At CONFAID, we believe mental health is the foundation for a fulfilling life, and everyone deserves a safe space to find support, guidance, and understanding. Our mission is to bridge the gap between individuals and accessible mental health resources, ensuring no one feels alone in their journey. We are more than just a website—we are a community that values compassion, empathy, and growth. Through innovative tools, expert advice, and engaging content, we empower our users to take charge of their mental well-being. Whether you're seeking self-help strategies, professional therapy options, or just a moment of peace, CONFAID is here for you every step of the way. Our platform is designed with you in mind, featuring a user-friendly interface and a soothing design that promotes relaxation and clarity. We aim to demystify mental health, making it easier to talk about and easier to navigate. At CONFAID, we celebrate progress—big or small—and understand that everyone's path is unique. By fostering connection and understanding, we create an environment where vulnerability is met with support, and questions are answered with care. Our team is dedicated to bringing you up-to-date resources, tailored solutions, and heartfelt stories to inspire hope and resilience. Together, we can break the stigma surrounding mental health and create a world where seeking help is seen as a sign of strength. Every individual matters, and at CONFAID, we’re here to remind you that your mental health is worth prioritizing. Join us in building a future where kindness, awareness, and empowerment are at the heart of every conversation. No matter where you are in your mental health journey, CONFAID is here to guide you, listen to you, and walk beside you. Welcome to a space where healing begins, and possibilities are endless.
+            </p>
+        </div>
+
+        <!-- Mindfulness Timer Section -->
+    <div class="mindfulness-section">
+        <h3>Take a Mindfulness Break</h3>
+        <p>Follow the guided breathing exercise to relax and calm your mind.</p>
+        <div class="timer">
+            <h4 id="timer-instruction">Get Ready...</h4>
+            <h2 id="countdown">3</h2>
+        </div>
+
+        <div id="timer-display">60 seconds left</div> <!-- You can show the countdown here -->
+
+        <button id="start-timer" onclick="startTimer()">Start Timer</button>
+        <button id="log-session" onclick="logMindfulnessSession()">Log Session</button>
+
+    </div>
+
+
+        <!-- Services Section -->
+        <div class="services-section">
+            <h3>Our Services</h3>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h4>Counseling</h4>
+                    <p>Connect with certified counselors for one-on-one sessions tailored to your needs.</p>
+                </div>
+                <div class="service-card">
+                    <h4>Community Support</h4>
+                    <p>Join a supportive community where you can share your experiences and find support.</p>
+                </div>
+                <div class="service-card">
+                    <h4>Mindfulness Resources</h4>
+                    <p>Explore mindfulness techniques and exercises to enhance your mental wellness journey.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Articles Section -->
+        <div class="featured-articles">
+            <h3>Related Blog Posts</h3>
+            <div class="articles-container">
+                <article class="blog-post">
+                    <h4>Understanding Anxiety and How to Cope</h4>
+                    <p>Learn about anxiety, its triggers, and practical tips to manage it in daily life.</p>
+                    <a href="#blog" class="read-more">Read More</a>
+                </article>
+                <article class="blog-post">
+                    <h4>10 Simple Mindfulness Practices</h4>
+                    <p>Discover easy ways to incorporate mindfulness into your daily routine for a calm and focused mind.</p>
+                    <a href="#blog" class="read-more">Read More</a>
+                </article>
+                <article class="blog-post">
+                    <h4>Managing Stress Effectively</h4>
+                    <p>Understand the sources of stress and explore techniques to manage it effectively.</p>
+                    <a href="#blog" class="read-more">Read More</a>
+                </article>
+            </div>
+        </div>
+
+        
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a> | <a href="#contact">Contact Us</a>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">X</a>
+            <a href="#">TikTok</a>
+        </div>
+        <p>&copy; 2024 CONFAID. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('logout-btn').addEventListener('click', function (event) {
+          event.preventDefault();
+          const userConfirmed = confirm('Are you sure you want to log out?');
+          if (userConfirmed) {
+            window.location.href = '/logout';
+          }
+        });
+      </script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.getElementById('start-timer').addEventListener('click', startTimer);
+        });
+      </script>
+      
+
+      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/timer.js') }}"></script>
+
+</body>
+</html>
