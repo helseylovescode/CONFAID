@@ -88,14 +88,14 @@ DB_NAME=confaid
 #### **4. Start the Development Server**
 Run the following command to start the server:
 ```bash
-npm start
+nodemon server.js
 ```
-Your server will run at http://localhost:3000.
+Node.js server running at http://127.0.0.1:3000 is what you'll see in your terminal
 
 #### **5. Access the Website**
 Open your web browser.
 <br>
-Visit: http://localhost:3000
+Visit: http://127.0.0.1:3000
 <br>
 You should now see the CONFAID homepage! 🎉
 
