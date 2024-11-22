@@ -65,7 +65,7 @@ CREATE DATABASE confaid;
 ```
 Import the database schema provided in the repository:
 ```bash
-mysql -u your_username -p confaid_db < schema.sql
+mysql -u your_username -p confaid < path/to/ schema.sql
 ```
 Update the database credentials in app.js:
 ```javascript
