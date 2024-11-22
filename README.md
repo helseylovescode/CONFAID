@@ -50,4 +50,3 @@ Ensure you have the following installed on your system:
 git clone https://github.com/yourusername/confaid.git
 cd confaid
 
-### **2.Install Dependencies**
