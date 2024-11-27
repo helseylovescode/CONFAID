@@ -9,7 +9,9 @@ The platform features:
 - A **Blog Page** for information on mental wellness  
 - A **Contact Page** to reach out for assistance or share feedback.  
 
-At CONFAID, we are committed to breaking the stigma surrounding mental health and making care accessible to everyone, everywhere.  
+At CONFAID, we are committed to breaking the stigma surrounding mental health and making care accessible to everyone, everywhere. 
+[![Watch the Demo Video](https://www.pexels.com/photo/self-care-isn-t-selfish-signage-2821823/)](https://drive.google.com/file/d/1SVIvvLVND8qjF2gzvh9Vej5GJ8iw9ZJN/view?usp=sharing)
+
 
 ---
 
